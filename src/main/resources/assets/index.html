@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Angular 2 QuickStart</title>
+
+    <script src="js/lib/es6-shim.min.js"></script>
+    <!-- 1. Load libraries -->
+    <script src="js/lib/angular2/angular2-polyfills.min.js"></script>
+    <script src="js/lib/system.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.defaultJSExtensions = true;
+
+        System.paths['angular2/*'] = '/js/lib/angular2/*.js';
+
+        System.config({
+            baseURL: '/js',
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+
+            }
+        });
+
+        Promise.all([
+            System.import("lib/angular2.min"),
+            System.import("lib/Rx.min"),
+            System.import('app/boot')
+
+        ]).then(null, console.error.bind(console));
+
+    </script>
+
+</head>
+
+<!-- 3. Display the application -->
+<body>
+<my-app>Loading...</my-app>
+</body>
+
+</html>
