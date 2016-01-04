@@ -50,8 +50,39 @@
           </archive>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.gmavenplus</groupId>
+        <artifactId>gmavenplus-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.spockframework</groupId>
+      <artifactId>spock-core</artifactId>
+      <version>1.0-groovy-2.4</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>groovy-all</artifactId>
+          <groupId>org.codehaus.groovy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>junit</artifactId>
+          <groupId>junit</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
   <properties>
     <dropwizard.version>0.9.1</dropwizard.version>
   </properties>
