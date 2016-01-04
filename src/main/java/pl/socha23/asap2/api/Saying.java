@@ -1,4 +1,4 @@
-package pl.socha23.api;
+package pl.socha23.asap2.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;

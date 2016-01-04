@@ -1,8 +1,8 @@
-package pl.socha23.resources;
+package pl.socha23.asap2.resources;
 
 import com.codahale.metrics.annotation.Timed;
 import com.google.common.base.Optional;
-import pl.socha23.api.Saying;
+import pl.socha23.asap2.api.Saying;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

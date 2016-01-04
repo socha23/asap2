@@ -1,4 +1,4 @@
-package pl.socha23;
+package pl.socha23.asap2;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;

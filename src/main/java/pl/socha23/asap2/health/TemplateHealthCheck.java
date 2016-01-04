@@ -1,4 +1,4 @@
-package pl.socha23.health;
+package pl.socha23.asap2.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

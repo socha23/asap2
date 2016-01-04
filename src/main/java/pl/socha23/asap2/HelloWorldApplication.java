@@ -1,11 +1,11 @@
-package pl.socha23;
+package pl.socha23.asap2;
 
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import pl.socha23.health.TemplateHealthCheck;
-import pl.socha23.resources.HelloWorldResource;
+import pl.socha23.asap2.health.TemplateHealthCheck;
+import pl.socha23.asap2.resources.HelloWorldResource;
 
 /**
  *
