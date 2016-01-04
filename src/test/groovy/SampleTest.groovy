@@ -4,6 +4,6 @@ class SampleTest extends Specification {
 
     def "test basic addition"() {
         expect:
-        2 + 2 == 4
+        2 + 2 == 3
     }
 }
