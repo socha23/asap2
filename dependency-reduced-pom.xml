@@ -19,7 +19,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>pl.socha23.asap2.HelloWorldApplication</mainClass>
+                  <mainClass>pl.socha23.asap.AsapApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>
