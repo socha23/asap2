@@ -1,0 +1,2 @@
+This is a placeholder build info. It should be overwritten during build with a file containing
+information about revision etc.
