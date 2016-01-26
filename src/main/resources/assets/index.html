@@ -25,12 +25,11 @@
             }
         });
 
-        Promise.all([
-            System.import("angular2/angular2.min"),
-            System.import("lib/Rx.min"),
-            System.import('app/boot')
+        System.import("angular2/angular2.min");
+        System.import("lib/Rx.min");
+        System.import('app/boot');
 
-        ]).then(null, console.error.bind(console));
+        console.error.bind(console);
 
     </script>
 
