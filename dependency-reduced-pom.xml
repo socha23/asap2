@@ -5,6 +5,18 @@
   <artifactId>asap2</artifactId>
   <version>1.0-SNAPSHOT</version>
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>assets/js/**/*.ts</exclude>
+          <exclude>assets/js/**/*.map</exclude>
+          <exclude>assets/js/angular2/**/*</exclude>
+          <exclude>assets/js/rxjs/**/*</exclude>
+          <exclude>assets/js/tsconfig.json</exclude>
+        </excludes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>

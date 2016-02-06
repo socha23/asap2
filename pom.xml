@@ -33,6 +33,20 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<!-- wycinamy developerskie biblioteki do angulara oraz źródła ts -->
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>assets/js/**/*.ts</exclude>
+					<exclude>assets/js/**/*.map</exclude>
+					<exclude>assets/js/angular2/**/*</exclude>
+					<exclude>assets/js/rxjs/**/*</exclude>
+					<exclude>assets/js/tsconfig.json</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

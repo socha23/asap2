@@ -13,7 +13,7 @@ System.register([], function(exports_1) {
                 { id: 17, name: "Dynama" },
                 { id: 18, name: "Dr IQ" },
                 { id: 19, name: "Magma" },
-                { id: 20, name: "Tornada" }
+                { id: 20, name: "Tornadera" }
             ]);
         }
     }

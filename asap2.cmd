@@ -1,0 +1,1 @@
+java -cp src/main/resources/ -jar target/asap2.jar server dev.yml
