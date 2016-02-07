@@ -3,19 +3,18 @@
 <head>
     <title>Angular 2 QuickStart</title>
 
-    <script src="js/lib/es6-shim.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+
+    <script src="lib/es6-shim.min.js"></script>
     <!-- 1. Load libraries -->
-    <script src="js/lib/angular2/angular2-polyfills.min.js"></script>
-    <script src="js/lib/system.js"></script>
+    <script src="lib/angular2/angular2-polyfills.min.js"></script>
+    <script src="lib/system.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
         System.defaultJSExtensions = true;
 
-        System.paths['angular2/*'] = '/js/lib/angular2/*.js';
-
         System.config({
-            baseURL: '/js',
             packages: {
                 app: {
                     format: 'register',
@@ -25,7 +24,7 @@
             }
         });
 
-        System.import("angular2/angular2.min");
+        System.import("lib/angular2/angular2.min");
         System.import("lib/Rx.min");
         System.import('app/boot');
 

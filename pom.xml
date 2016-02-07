@@ -38,11 +38,11 @@
 				<!-- wycinamy developerskie biblioteki do angulara oraz źródła ts -->
 				<directory>src/main/resources</directory>
 				<excludes>
-					<exclude>assets/js/**/*.ts</exclude>
-					<exclude>assets/js/**/*.map</exclude>
-					<exclude>assets/js/angular2/**/*</exclude>
-					<exclude>assets/js/rxjs/**/*</exclude>
-					<exclude>assets/js/tsconfig.json</exclude>
+					<exclude>assets/**/*.ts</exclude>
+					<exclude>assets/**/*.map</exclude>
+					<exclude>assets/angular2/**/*</exclude>
+					<exclude>assets/rxjs/**/*</exclude>
+					<exclude>assets/tsconfig.json</exclude>
 				</excludes>
 			</resource>
 		</resources>

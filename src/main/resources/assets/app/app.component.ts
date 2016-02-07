@@ -3,7 +3,7 @@ import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
 import {OnInit} from 'angular2/core';
-
+import {HeroFormComponent} from './hero-form.component';
 
 @Component({
     selector: 'my-app',
@@ -55,9 +55,10 @@ import {OnInit} from 'angular2/core';
             border-radius: 4px 0px 0px 4px;
         }
     `],
-    directives: [HeroDetailComponent],
+    directives: [HeroDetailComponent, HeroFormComponent],
     template: `
         <h1>{{title}}</h1>
+        <hero-form></hero-form>
 
         <h2>My Heroes</h2>
         <ul class="heroes">
