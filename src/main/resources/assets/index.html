@@ -3,8 +3,6 @@
 <head>
     <title>Angular 2 QuickStart</title>
 
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
-
     <script src="lib/es6-shim.min.js"></script>
     <!-- 1. Load libraries -->
     <script src="lib/angular2/angular2-polyfills.min.js"></script>
@@ -13,6 +11,8 @@
     <!-- 2. Configure SystemJS -->
     <script>
         System.defaultJSExtensions = true;
+
+        System.paths['angular2/*'] = '/lib/angular2/*.js';
 
         System.config({
             packages: {
