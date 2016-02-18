@@ -35,15 +35,8 @@ System.register(['angular2/core', './hero'], function(exports_1) {
                     ];
                     this.model = new hero_1.Hero(18, "Dr IQ", "Super intelligence", "Harry Brainiac");
                     this.submitted = false;
-                    this.active = true;
                 }
                 HeroFormComponent.prototype.onSubmit = function () { this.submitted = true; };
-                HeroFormComponent.prototype.newHero = function () {
-                    var _this = this;
-                    this.model = new hero_1.Hero(42, '', '');
-                    this.active = false;
-                    setTimeout(function () { return _this.active = true; }, 0);
-                };
                 Object.defineProperty(HeroFormComponent.prototype, "diagnostic", {
                     get: function () { return JSON.stringify(this.model); },
                     enumerable: true,
