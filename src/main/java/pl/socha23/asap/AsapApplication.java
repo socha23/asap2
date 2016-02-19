@@ -4,6 +4,7 @@ import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import pl.socha23.asap.assets.OnePageAppAssetsBundle;
 import pl.socha23.asap.health.BuildInfoHealthCheck;
 import pl.socha23.asap.resources.AppInfoResource;
 
@@ -20,7 +21,7 @@ public class AsapApplication extends Application<AsapConfiguration> {
 
     @Override
     public void initialize(Bootstrap<AsapConfiguration> bootstrap) {
-        bootstrap.addBundle(new AssetsBundle("/assets", "/", "index.html"));
+        bootstrap.addBundle(new OnePageAppAssetsBundle("/assets", "/", "index.html"));
 
     }
 
