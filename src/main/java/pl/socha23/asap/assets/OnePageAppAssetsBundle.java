@@ -1,7 +1,6 @@
 package pl.socha23.asap.assets;
 
 import com.google.common.base.Charsets;
-import com.google.common.io.Resources;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.servlets.assets.AssetServlet;
 
