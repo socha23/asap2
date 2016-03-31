@@ -1,4 +1,4 @@
-System.register(['angular2/core', './heroes.component', './dashboard.component', './hero.service', 'angular2/router', "./hero-detail.component"], function(exports_1) {
+System.register(['angular2/core', 'angular2/http', 'angular2/router', './heroes.component', './dashboard.component', './hero.service', "./hero-detail.component"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +8,18 @@ System.register(['angular2/core', './heroes.component', './dashboard.component',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, heroes_component_1, dashboard_component_1, hero_service_1, router_1, hero_detail_component_1;
+    var core_1, http_1, router_1, heroes_component_1, dashboard_component_1, hero_service_1, hero_detail_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
@@ -23,9 +29,6 @@ System.register(['angular2/core', './heroes.component', './dashboard.component',
             },
             function (hero_service_1_1) {
                 hero_service_1 = hero_service_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
             },
             function (hero_detail_component_1_1) {
                 hero_detail_component_1 = hero_detail_component_1_1;
@@ -61,6 +64,7 @@ System.register(['angular2/core', './heroes.component', './dashboard.component',
                         template: "\n        <h1>{{title}}</h1>\n        <nav>\n        <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n        </nav>\n        <router-outlet></router-outlet>\n\n    ",
                         providers: [
                             router_1.ROUTER_PROVIDERS,
+                            http_1.HTTP_PROVIDERS,
                             hero_service_1.HeroService
                         ]
                     }), 

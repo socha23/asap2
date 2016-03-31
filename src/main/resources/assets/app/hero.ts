@@ -6,7 +6,6 @@ export class Hero {
         public power: string,
         public alterEgo?: string
 
-    ) { }
-
+    ) {}
 
 }

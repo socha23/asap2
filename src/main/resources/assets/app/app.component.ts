@@ -1,9 +1,11 @@
 import {Component} from 'angular2/core'
+import {HTTP_PROVIDERS} from 'angular2/http'
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {HeroesComponent} from './heroes.component'
 import {DashboardComponent} from './dashboard.component'
 import {HeroService} from './hero.service'
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
-import {HeroDetailComponent} from "./hero-detail.component";
+import {HeroDetailComponent} from "./hero-detail.component"
+import {HTTP_PROVIDERS} from "../angular2/ts/http";
 
 @RouteConfig([
     {
@@ -38,6 +40,7 @@ import {HeroDetailComponent} from "./hero-detail.component";
     `,
     providers: [
         ROUTER_PROVIDERS,
+        HTTP_PROVIDERS,
         HeroService
     ]
 })
