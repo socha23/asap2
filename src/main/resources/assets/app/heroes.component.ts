@@ -18,6 +18,8 @@ export class HeroesComponent implements OnInit{
 
     public heroes: Hero[];
 
+    errorMessage: string;
+
     public selectedHero: Hero;
 
     ngOnInit() {
@@ -29,7 +31,21 @@ export class HeroesComponent implements OnInit{
     }
 
     getHeroes() {
-        this._heroService.getHeroes().then(heroes => this.heroes = heroes);
+        this._heroService.getHeroes().subscribe(
+            heroes => this.heroes = heroes,
+            error => this.errorMessage = <any>error
+        );
+    }
+
+    addHero(name: string) {
+        if (!name) {
+            return;
+        }
+        this._heroService.addHero(name)
+            .subscribe(
+                hero => this.heroes.push(hero),
+                error => this.errorMessage = <any>error
+            );
     }
 
     gotoDetail() {

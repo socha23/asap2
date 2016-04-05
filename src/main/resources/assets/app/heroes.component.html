@@ -3,10 +3,20 @@
     <li *ngFor="#hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
         <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
+    <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
 </ul>
 <div *ngIf="selectedHero">
     <h2>
         {{selectedHero.name | uppercase}} is my hero
     </h2>
     <button (click)="gotoDetail()">View Details</button>
+
+</div>
+<div>
+    New Hero:
+    <input #newHero />
+    <button (click)="addHero(newHero.value); newHero.value=''">
+        Add Hero
+    </button>
+
 </div>

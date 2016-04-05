@@ -5,7 +5,6 @@ import {HeroesComponent} from './heroes.component'
 import {DashboardComponent} from './dashboard.component'
 import {HeroService} from './hero.service'
 import {HeroDetailComponent} from "./hero-detail.component"
-import {HTTP_PROVIDERS} from "../angular2/ts/http";
 
 @RouteConfig([
     {

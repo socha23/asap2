@@ -28,8 +28,12 @@
 
         System.import("lib/angular2/angular2.min");
         System.import("lib/angular2/bundles/router.dev");
+        System.import("lib/angular2/bundles/http.min");
         System.import("lib/Rx.min");
         System.import('app/boot');
+
+        // Add all operators to Observable
+        System.import("rxjs/Rx");
 
         console.error.bind(console);
 
