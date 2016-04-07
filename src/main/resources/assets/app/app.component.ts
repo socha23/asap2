@@ -6,6 +6,9 @@ import {DashboardComponent} from './dashboard.component'
 import {HeroService} from './hero.service'
 import {HeroDetailComponent} from "./hero-detail.component"
 
+import {WikiComponent} from "./wiki/wiki.component"
+
+
 @RouteConfig([
     {
         path: '/heroes',
@@ -26,7 +29,7 @@ import {HeroDetailComponent} from "./hero-detail.component"
 ])
 @Component({
     selector: 'my-app',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, WikiComponent],
     styleUrls: ['app/app.component.css'],
     template: `
         <h1>{{title}}</h1>
@@ -35,6 +38,7 @@ import {HeroDetailComponent} from "./hero-detail.component"
         <a [routerLink]="['Heroes']">Heroes</a>
         </nav>
         <router-outlet></router-outlet>
+        <my-wiki></my-wiki>
 
     `,
     providers: [

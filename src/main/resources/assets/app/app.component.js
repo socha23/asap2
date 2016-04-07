@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/http', 'angular2/router', './heroes.component', './dashboard.component', './hero.service', "./hero-detail.component"], function(exports_1) {
+System.register(['angular2/core', 'angular2/http', 'angular2/router', './heroes.component', './dashboard.component', './hero.service', "./hero-detail.component", "./wiki/wiki.component"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/http', 'angular2/router', './heroes.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, router_1, heroes_component_1, dashboard_component_1, hero_service_1, hero_detail_component_1;
+    var core_1, http_1, router_1, heroes_component_1, dashboard_component_1, hero_service_1, hero_detail_component_1, wiki_component_1;
     var AppComponent;
     return {
         setters:[
@@ -32,6 +32,9 @@ System.register(['angular2/core', 'angular2/http', 'angular2/router', './heroes.
             },
             function (hero_detail_component_1_1) {
                 hero_detail_component_1 = hero_detail_component_1_1;
+            },
+            function (wiki_component_1_1) {
+                wiki_component_1 = wiki_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -59,9 +62,9 @@ System.register(['angular2/core', 'angular2/http', 'angular2/router', './heroes.
                     ]),
                     core_1.Component({
                         selector: 'my-app',
-                        directives: [router_1.ROUTER_DIRECTIVES],
+                        directives: [router_1.ROUTER_DIRECTIVES, wiki_component_1.WikiComponent],
                         styleUrls: ['app/app.component.css'],
-                        template: "\n        <h1>{{title}}</h1>\n        <nav>\n        <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n        </nav>\n        <router-outlet></router-outlet>\n\n    ",
+                        template: "\n        <h1>{{title}}</h1>\n        <nav>\n        <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n        </nav>\n        <router-outlet></router-outlet>\n        <my-wiki></my-wiki>\n\n    ",
                         providers: [
                             router_1.ROUTER_PROVIDERS,
                             http_1.HTTP_PROVIDERS,
